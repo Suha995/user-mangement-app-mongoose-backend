@@ -1,0 +1,32 @@
+@url = http://localhost:3016
+
+
+### show all users
+GET {{url}}
+content-type: application/json
+
+
+### delete user
+DELETE  http://localhost:3022/deleteuser/6192341eba83b3cee4afb397
+content-type: application/json
+
+
+### add user
+POST {{url}}/insertuser
+content-type: application/json
+ 
+    {
+        "name": "lamis Additive",
+        "username": "angie_additive",
+        "email": "angie@hotmail.com"
+    }
+
+
+
+### edit user
+PATCH  http://localhost:3022/edituseremail/6192341eba83b3cee4afb398
+content-type: application/json
+
+{
+    "email": "user@user.com"
+}
